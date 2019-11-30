@@ -24,7 +24,7 @@ const schema = new GraphQLSchema({
 const app = express();
 
 // Add graphQL into the express middleware Only need schema and UI interface, resolvers not needed since they are implemented directly into the provided schemas
-app.use('/graphql', expressGraphql({
+app.post('/graphql', expressGraphql({
     schema: schema,
     graphiql: true
 }));

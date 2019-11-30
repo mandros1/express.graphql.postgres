@@ -42,7 +42,7 @@ const RootMutation = new GraphQLObjectType({
                 // Note RETURNING *, it was previously RETURNING title, which then disallows for user to adapt the query and
                 // ask for description (for example), or any other columns
                 // by changing 'title' to an asterix now all data becomes available
-                const query = `INSERT INTO project(author_id, created_at, title, description) VALUES ($1, $2, $3, $4) RETURNING *;`;
+                const query = `INSERT INTO project(author_id, created_at, title, description) VALUES ($1, $2, $3, $4) RETURNING *`;
                 const values = [
                     args.author_id,
                     new Date(),
@@ -54,7 +54,7 @@ const RootMutation = new GraphQLObjectType({
                     .one(query, values)
                     .then(res => {
                         console.log(`SUCCESS: ${JSON.stringify(res)}`);
-                        return [res];
+                        return res;
                     })
                     .catch(err => {
                         console.log(`ERROR: ${err}`);
