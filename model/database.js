@@ -11,13 +11,14 @@ const config = {
     password: process.env.POSTGRES_PW
 };
 
-console.log(`Host and others are: ${process.env.POSTGRES_HOST} ${process.env.POSTGRES_PORT} ${process.env.POSTGRES_DB} ${process.env.POSTGRES_USER} ${process.env.POSTGRES_PW}`)
+// console.log(`Host and others are: ${process.env.POSTGRES_HOST} ${process.env.POSTGRES_PORT} ${process.env.POSTGRES_DB} ${process.env.POSTGRES_USER} ${process.env.POSTGRES_PW}`)
 
-const db = pgPromiseObject(config);
+const database = pgPromiseObject(config);
 
-db.any('select * from users')
-    .then(res => {
-        console.log(res);
-    });
+// Uncomment the code below and run node database.js to test the POSTGRE connection
+// db.any('select * from users')
+//     .then(res => {
+//         console.log(res);
+//     });
 
-module.exports = db;
+exports.db = database;

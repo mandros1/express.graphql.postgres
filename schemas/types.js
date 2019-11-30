@@ -1,5 +1,5 @@
 const graphql = require('graphql');
-const { GraphQLObjectType, GraphQLString, GraphQLInt} = graphql;
+const { GraphQLObjectType, GraphQLString, GraphQLInt } = graphql;
 
 /**
  * Users Table mapping in GraphQL
@@ -9,11 +9,11 @@ const UserType = new GraphQLObjectType({
     name: "User",
     type: "Query",
     fields: {
-        id: {type: GraphQLInt},
-        firstName: {type: GraphQLString},
-        lastName: {type: GraphQLString},
-        email: {type: GraphQLString},
-        age: {type: GraphQLInt}
+        id: { type: GraphQLInt },
+        firstname: { type: GraphQLString },
+        lastname: { type: GraphQLString },
+        email: { type: GraphQLString },
+        age: { type: GraphQLInt }
     }
 });
 
@@ -25,11 +25,11 @@ const ProjectType = new GraphQLObjectType({
     name: 'Project',
     type: 'Query',
     fields: {
-        id: {type: GraphQLInt},
-        author_id: {type: GraphQLInt},
-        created_at: {type: GraphQLString},
-        title: {type: GraphQLString},
-        description: {type: GraphQLString}
+        id: { type: GraphQLInt },
+        author_id: { type: GraphQLInt },
+        created_at: { type: GraphQLString },
+        title: { type: GraphQLString },
+        description: { type: GraphQLString }
     }
 });
 
