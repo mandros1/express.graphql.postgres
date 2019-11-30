@@ -18,6 +18,9 @@ It needs to be filled by the data for connecting to postgres and the wanted PORT
 ### 4. Run npm install
 In the root of this project run ***npm install*** to install all the needed packages
 
+## Run
+Run it with simple **npm start** command
+
 ## Testing
 I have provided **GraphQL.postman_collection.json** which is a collection of requests for POSTMAN 
 (open source REST API testing tool) to be sent toward the API. All the requests are supposed to be POST, as 
